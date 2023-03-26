@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/navigation/route.dart';
-import 'package:flutter_template/view/homeScreen/home_screen.dart';
-import 'package:flutter_template/view/onBoardingScreen/on_boarding_screen.dart';
-import 'package:flutter_template/view/splash_screen.dart';
+import 'constants/app_strings.dart';
+import 'navigation/route.dart';
+import 'view/homeScreen/home_screen.dart';
+import 'view/onBoardingScreen/on_boarding_screen.dart';
+import 'view/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,15 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: AppString.appName,
       theme: ThemeData(
         primarySwatch: Colors.green,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Template"),
-          centerTitle: true,
-        ),
       ),
       // ignore: prefer_const_literals_to_create_immutables
       routes: {
